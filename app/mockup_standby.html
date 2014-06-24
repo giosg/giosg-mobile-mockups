@@ -43,25 +43,52 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                 <li><a href="mockup_login.html" target="_self">Log out</a></li>
-                <li><a href="mockup_recent_chats.html" target="_self">My recent chats</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container -->
         </nav>
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs main-tabs">
+              <li class="active"><a href="#visitors" data-toggle="tab">Visitors</a></li>
+              <li><a href="#recent-chats" data-toggle="tab">Recent chats</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane main-tab-pane active" id="visitors">
                     <button type="button" class="btn btn-primary btn-lg-circle numeric">
                         15
                         <span class="btn-badge">1</span>
                     </button>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-10 col-xs-offset-1">
-                    <a class="btn btn-block btn-default btn-lg" href="mockup_recent_chats.html">
-                        My recent chats
-                    </a>
+                <div class="tab-pane main-tab-pane" id="recent-chats">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="list-group">
+                                <a class="list-group-item" href="">
+                                    <span class="badge">5</span>
+                                    13.5.2014 13.02
+                                </a>
+                                <a class="list-group-item" href="">
+                                    <span class="badge">2</span>
+                                    12.5.2014 13.02
+                                </a>
+                                <a class="list-group-item" href="">
+                                    <span class="badge">30</span>
+                                    12.5.2014 12.02
+                                </a>
+                                <a class="list-group-item" href="">
+                                    <span class="badge">6</span>
+                                    11.5.2014 13.02
+                                </a>
+                                <a class="list-group-item" href="">
+                                    <span class="badge">5</span>
+                                    10.5.2014 13.02
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

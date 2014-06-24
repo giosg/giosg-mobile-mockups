@@ -32,6 +32,9 @@ body {
     border-width: $border-size;
     position: relative;
 
+    &:focus {
+        outline: none;
+    }
     &.numeric {
         font-size: 60px;
     }
@@ -81,6 +84,28 @@ body {
         background-image: -webkit-linear-gradient(top, lighten($bg-color, $contrast), darken($bg-color, $contrast));
         background-image:         linear-gradient(to bottom, lighten($bg-color, $contrast), darken($bg-color, $contrast));
     }
+}
+
+.main-tabs {
+    @extend .nav-justified;
+    @extend .nav-tabs-justified;
+    > li {
+        display: table-cell;
+        width: 1%;
+        > a {
+            margin-bottom: 0;
+            border-bottom: 1px solid $nav-tabs-justified-link-border-color;
+            border-radius: $border-radius-base $border-radius-base 0 0;
+        }
+    }
+    > .active > a,
+    > .active > a:hover,
+    > .active > a:focus {
+      border-bottom-color: $nav-tabs-justified-active-link-border-color;
+    }
+}
+.main-tab-pane {
+    padding: 15px 0;
 }
 
 .toggleable {
