@@ -21,7 +21,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <nav class="navbar navbar-default navbar-inverse" role="navigation">
+        <nav class="navbar navbar-inverse" role="navigation">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -30,10 +30,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="mockup_standby.html" target="_self">
-              <span class="back-icon glyphicon glyphicon-chevron-left"></span>
-              My recent chats
-              </a>
+                <span class="toggleable toggleable-on" onclick="$(this).toggleClass('toggleable-on toggleable-off')">
+                    <span class="toggleable-bg">
+                        <span class="toggleable-label toggleable-label-on">On</span>
+                        <span class="toggleable-label toggleable-label-off">Off</span>
+                    </span>
+                    <span class="toggleable-handle"></span>
+                </span>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
