@@ -6,6 +6,9 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 $body-bg: #f5f5f5;
 
 $navbar-inverse-bg: #222533;
+$navbar-inverse-toggle-hover-bg: lighten($navbar-inverse-bg, 6%);
+$navbar-inverse-toggle-icon-bar-bg: lighten($navbar-inverse-bg, 50%);
+$navbar-inverse-toggle-border-color: lighten($navbar-inverse-bg, 20%);
 
 // bower:scss
 @import '../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
