@@ -129,6 +129,9 @@ body {
     > .active > a:focus {
       border-bottom-color: $nav-tabs-justified-active-link-border-color;
     }
+    .badge {
+        background-color: $brand-danger;
+    }
 }
 .main-tab-pane {
     padding: 15px 0;
