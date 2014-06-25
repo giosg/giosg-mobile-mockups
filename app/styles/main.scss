@@ -4,7 +4,8 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
  * Overridden Bootstrap variables
  */
 $body-bg: #f5f5f5;
-
+$font-size-base: 16px;
+$navbar-height: 60px;
 $navbar-inverse-bg: #222533;
 $navbar-inverse-toggle-hover-bg: lighten($navbar-inverse-bg, 6%);
 $navbar-inverse-toggle-icon-bar-bg: lighten($navbar-inverse-bg, 50%);
@@ -91,10 +92,6 @@ body {
         font-size: 75%;
         margin-right: 0.3em;
     }
-    .toggleable {
-        margin-top: 8px;
-        margin-left: 10px;
-    }
 }
 
 @mixin toggleable-vertical-gradient($bg-color, $contrast) {
@@ -135,12 +132,18 @@ body {
     $bg-off: #966;
     $color-on: #fff;
     $color-off: #ccc;
-    $outer-height: 38px;
+    $outer-height: 42px;
     $spacing: 3px;
     $inner-height: $outer-height - $spacing * 2;
+
+    .navbar & {
+        margin-top: ($navbar-height - $inner-height) / 2;
+        margin-left: ($navbar-height - $inner-height) / 2;
+    }
+
     height: $inner-height;
     display: inline-block;
-    width: $inner-height * 2.7;
+    width: $inner-height * 2.9;
     position: relative;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -148,7 +151,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    font-size: floor($inner-height * 0.4);
+    font-size: floor($inner-height * 0.45);
     cursor: pointer;
 
     .toggleable-handle {
@@ -181,11 +184,11 @@ body {
     }
     .toggleable-label-on {
         display: none;
-        padding: 0 $outer-height + $spacing 0 $inner-height * 0.2;
+        padding: 0 $inner-height + $spacing 0 $inner-height * 0.15;
     }
     .toggleable-label-off {
         display: block;
-        padding: 0 $inner-height * 0.2 0 $outer-height + $spacing;
+        padding: 0 $inner-height * 0.15 0 $inner-height + $spacing;
     }
     &.toggleable-on {
         .toggleable-bg {
