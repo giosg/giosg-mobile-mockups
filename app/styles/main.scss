@@ -14,13 +14,32 @@ $navbar-inverse-toggle-border-color: lighten($navbar-inverse-bg, 20%);
 @import '../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
 // endbower
 
+html, body {
+    height: 100%;
+}
 body {
     overflow: hidden;
+    > .giosg-background {
+        z-index: 0;
+    }
+    > .navbar, > .container {
+        position: relative;
+        z-index: 1;
+    }
 }
 
 .giosg-logo {
     max-width: 95%;
     margin: 20px auto;
+}
+
+.giosg-background {
+    position: absolute;
+    right: -20px; bottom: 20px;
+    top: 20px; left: -20px;
+    background: url('../images/giosg.png') no-repeat right bottom;
+    background-size: contain;
+    opacity: 0.15;
 }
 
 .btn-lg-circle {
@@ -113,15 +132,15 @@ body {
 
 .toggleable {
     $bg-on: #3a3;
-    $bg-off: #777;
+    $bg-off: #966;
     $color-on: #fff;
     $color-off: #ccc;
-    $outer-height: 36px;
-    $spacing: 2px;
+    $outer-height: 38px;
+    $spacing: 3px;
     $inner-height: $outer-height - $spacing * 2;
     height: $inner-height;
     display: inline-block;
-    width: $inner-height * 2.5;
+    width: $inner-height * 2.7;
     position: relative;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -129,7 +148,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    font-size: floor($inner-height * 0.5);
+    font-size: floor($inner-height * 0.4);
     cursor: pointer;
 
     .toggleable-handle {
@@ -162,11 +181,11 @@ body {
     }
     .toggleable-label-on {
         display: none;
-        padding: 0 $outer-height + $spacing 0 $inner-height * 0.15;
+        padding: 0 $outer-height + $spacing 0 $inner-height * 0.2;
     }
     .toggleable-label-off {
         display: block;
-        padding: 0 $inner-height * 0.15 0 $outer-height + $spacing;
+        padding: 0 $inner-height * 0.2 0 $outer-height + $spacing;
     }
     &.toggleable-on {
         .toggleable-bg {
