@@ -91,6 +91,7 @@ body {
 }
 
 .navbar {
+    margin: 0;
     .back-icon {
         font-size: 75%;
         margin-right: 0.3em;
@@ -114,10 +115,13 @@ body {
     > li {
         display: table-cell;
         width: 1%;
+        background-color: darken($body-bg, 7%);
+        &, & > a {
+            border-radius: 0 !important;
+        }
         > a {
             margin-bottom: 0;
             border-bottom: 1px solid $nav-tabs-justified-link-border-color;
-            border-radius: $border-radius-base $border-radius-base 0 0;
         }
     }
     > .active > a,
