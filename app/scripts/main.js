@@ -9,13 +9,23 @@ $(function() {
         if (isActive) {
             isActive = false;
             clearInterval(visitorInterval);
-            $this.removeClass('btn-attention');
-            $badge.hide();
+            $badge.hide().detach();
+            $this
+                .addClass('numeric')
+                .removeClass('btn-attention small')
+                .text('15')
+                .append($badge)
+            ;
         } else {
             isActive = true;
             counter = 0;
-            $badge.text('0').show();
-            $this.addClass('btn-attention');
+            $badge.text('0').detach().show();
+            $this
+                .removeClass('numeric')
+                .addClass('btn-attention small')
+                .html("\"Hi, can you help<br>me with this?\"")
+                .append($badge)
+            ;
             visitorInterval = setInterval(function() {
                 counter += 1;
                 $badge.text('' + counter);
