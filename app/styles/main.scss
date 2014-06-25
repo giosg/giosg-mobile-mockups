@@ -138,6 +138,8 @@ body {
     $outer-height: 42px;
     $spacing: 3px;
     $inner-height: $outer-height - $spacing * 2;
+    $width: $inner-height * 2.9;
+    $transition-duration: 150ms;
 
     .navbar & {
         margin-top: ($navbar-height - $inner-height) / 2;
@@ -146,7 +148,7 @@ body {
 
     height: $inner-height;
     display: inline-block;
-    width: $inner-height * 2.9;
+    width: $width;
     position: relative;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -169,6 +171,8 @@ body {
         box-shadow: 0px 1px 6px rgba(black, 0.3);
         border: 1px solid #ddd;
         @include toggleable-vertical-gradient(#ddd, 15%);
+        transition: transform $transition-duration ease;
+        -webkit-transition: -webkit-transform $transition-duration ease;
     }
     .toggleable-bg {
         width: 100%;
@@ -198,8 +202,8 @@ body {
             @include toggleable-vertical-gradient($bg-on, -5%);
         }
         .toggleable-handle {
-            left: auto;
-            right: -$spacing;
+            transform: translate($width - $inner-height, 0);
+            -webkit-transform: translate($width - $inner-height, 0);
         }
         .toggleable-label {
             color: $color-on;
