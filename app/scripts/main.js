@@ -7,9 +7,8 @@ $(function() {
     $(window).on('scroll', function(event) {
         event.preventDefault();
     });
-    $('#visitor-button').on('click', function() {
-        var $this = $(this);
-        var $badge = $this.find('.btn-badge');
+
+    function endVisitorAttention($this, $badge) {
         if (isActive) {
             isActive = false;
             clearInterval(visitorInterval);
@@ -21,7 +20,11 @@ $(function() {
                 .text('15')
                 .append($badge)
             ;
-        } else {
+        }
+    }
+
+    function startVisitorAttention($this, $badge) {
+        if (!isActive) {
             isActive = true;
             counter = 0;
             $badge.text('0').detach().show();
@@ -38,6 +41,12 @@ $(function() {
                 $badge.text('' + counter);
             }, 1000);
         }
+    }
+
+    $('#visitor-button').on('mouseenter', function() {
+        var $this = $(this);
+        var $badge = $this.find('.btn-badge');
+        startVisitorAttention($this, $badge);
     });
 
     $('textarea').on('focus', function() {
