@@ -36,9 +36,13 @@ $(function() {
                 .append($badge)
             ;
             visitorInterval = setInterval(function() {
-                counter += 1;
-                $tabBadge.text('' + counter);
-                $badge.text('' + counter);
+                if (counter >= 20) {
+                    endVisitorAttention($this, $badge);
+                } else {
+                    counter += 1;
+                    $tabBadge.text('' + counter);
+                    $badge.text('' + counter);
+                }
             }, 1000);
         }
     }
