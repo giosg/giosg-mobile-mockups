@@ -4,6 +4,9 @@ $(function() {
     var counter;
     var isActive = false;
     var $tabBadge = $('.main-tabs .badge');
+    $(window).on('scroll', function(event) {
+        event.preventDefault();
+    });
     $('body').on('click', '#visitor-button', function() {
         var $this = $(this);
         var $badge = $this.find('.btn-badge');
@@ -35,5 +38,12 @@ $(function() {
                 $badge.text('' + counter);
             }, 1000);
         }
+    });
+
+    $('textarea').on('focus', function() {
+        $('body').addClass('show-virtual-keyboard');
+    });
+    $('textarea').on('blur', function() {
+        $('body').removeClass('show-virtual-keyboard');
     });
 });

@@ -15,10 +15,12 @@ $navbar-inverse-toggle-border-color: lighten($navbar-inverse-bg, 20%);
 // endbower
 
 html, body {
+    width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 body {
-    overflow: hidden;
+    position: relative;
     > .giosg-background {
         z-index: 0;
     }
@@ -281,6 +283,29 @@ body {
             display: none;
         }
     }
+}
+
+$virtual-keyboard-size: 200px;
+#virtual-keyboard {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ccc;
+    padding: 50px;
+    text-align: center;
+    color: #666;
+    font-size: 1.4em;
+    height: $virtual-keyboard-size;
+    z-index: 2;
+}
+body > * {
+    transition: transform 150ms;
+    -webkit-transition: -webkit-transform 150ms;
+}
+body.show-virtual-keyboard > * {
+    transform: translate(0, -$virtual-keyboard-size);
+    -webkit-transform: translate(0, -$virtual-keyboard-size);
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
