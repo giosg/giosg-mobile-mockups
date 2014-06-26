@@ -32,11 +32,8 @@
         </style>
     </head>
     <body>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
         <p>
+            <a href="javascript:void(0)" id="navigate-back">Back</a> |
             <a href="javascript:void(0)" id="rotate-mobile-frame">Rotate</a>
         </p>
         <div id="mobile-frame-container" class="portrait">
@@ -48,10 +45,15 @@
         <!-- endbower -->
         <!-- endbuild -->
         <script type="text/javascript">
-        $('#rotate-mobile-frame').on('click', function() {
+        (function() {
             'use strict';
-            $('#mobile-frame-container').toggleClass('portrait landscape');
-        });
+            $('#rotate-mobile-frame').on('click', function() {
+                $('#mobile-frame-container').toggleClass('portrait landscape');
+            });
+            $('#navigate-back').on('click', function() {
+                $('#mobile-frame').prop('contentWindow').history.back();
+            });
+        }).call(this);
         </script>
 </body>
 </html>

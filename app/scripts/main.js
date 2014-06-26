@@ -7,7 +7,7 @@ $(function() {
     $(window).on('scroll', function(event) {
         event.preventDefault();
     });
-    $('body').on('click', '#visitor-button', function() {
+    $('#visitor-button').on('click', function() {
         var $this = $(this);
         var $badge = $this.find('.btn-badge');
         if (isActive) {
