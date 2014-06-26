@@ -1,9 +1,8 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
-/**
- * Overridden Bootstrap variables
- */
 $body-bg: #f5f5f5;
+$screen-sm: 640px;
+$container-sm: $screen-sm;
 $font-size-base: 16px;
 $navbar-height: 60px;
 $navbar-inverse-bg: #222533;
@@ -30,8 +29,8 @@ body {
 }
 
 .giosg-logo {
-    max-width: 95%;
-    margin: 20px auto;
+    max-width: 90%;
+    margin: 20px auto 0px;
 }
 
 .giosg-background {
@@ -110,6 +109,7 @@ body {
 }
 
 .main-tabs {
+    @extend .nav-tabs;
     @extend .nav-justified;
     @extend .nav-tabs-justified;
     > li {
@@ -149,8 +149,7 @@ body {
     $transition-duration: 150ms;
 
     .navbar & {
-        margin-top: ($navbar-height - $inner-height) / 2;
-        margin-left: ($navbar-height - $inner-height) / 2;
+        margin: ($navbar-height - $inner-height) / 2;
     }
 
     height: $inner-height;
