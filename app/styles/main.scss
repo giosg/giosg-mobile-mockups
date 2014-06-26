@@ -177,6 +177,25 @@ body {
         height: 60px;
     }
 }
+.chat-log-entry {
+    $color-1: #fff;
+    $color-2: #eef2ff;
+    background: $color-1;
+    border: 1px solid darken($color-1, 25%);
+    width: 90%;
+    clear: both;
+    margin: 0px 0px 8px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    &.pull-right {
+        background-color: $color-2;
+        border-color: darken($color-2, 10%);
+    }
+    p {
+        margin: 0;
+    }
+}
 
 .toggleable {
     $bg-on: #3a3;
