@@ -160,10 +160,6 @@ body {
 }
 .layout-fill-height {
     height: 100%;
-    .layout-cell {
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
 }
 .layout-static-height {
     height: 30px;
@@ -171,6 +167,7 @@ body {
 .layout-cell {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .chat-message-composition {
@@ -233,6 +230,14 @@ body {
     }
 }
 
+.chat-log-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
 .chat-log-entry {
     $color-1: #fff;
     $color-2: #eef2ff;
