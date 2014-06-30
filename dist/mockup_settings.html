@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>giosg mobile mockups</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="styles/vendor.css"/>
+        <link rel="stylesheet" href="styles/main.css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container text-center">
+                <a class="btn navbar-btn pull-left" href="mockup_operator.html">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="btn navbar-btn pull-right invisible">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+                <span class="toggleable toggleable-on" onclick="$(this).toggleClass('toggleable-on toggleable-off')">
+                    <span class="toggleable-bg">
+                        <span class="toggleable-label toggleable-label-on">Online</span>
+                        <span class="toggleable-label toggleable-label-off">Offline</span>
+                    </span>
+                    <span class="toggleable-handle"></span>
+                </span>
+            </div><!-- /.container -->
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h4>Profile settings</h4>
+                    <p>Edit your profile settings on the giosg website.</p>
+                    <a href="https://service.giosg.com" class="btn btn-info btn-block btn-lg" target="_top">
+                        Open browser
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <h4>Log out</h4>
+                    <p>Log out or switch to another user account.</p>
+                    <a href="mockup_login.html" class="btn btn-danger btn-block btn-lg" target="_self">
+                        Log out
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/plugins.js"></script>
+
+        <script src="scripts/main.js"></script>
+</body>
+</html>
