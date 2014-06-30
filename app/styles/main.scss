@@ -95,9 +95,17 @@ body {
 .navbar {
     margin: 0;
     z-index: 1;
-    .back-icon {
-        font-size: 75%;
-        margin-right: 0.3em;
+    .navbar-btn {
+        margin-top: 8px;
+        margin-bottom: 6px;
+        padding: 6px;
+        color: #ccc;
+        &:hover, &:active {
+            color: #fff;
+        }
+        .glyphicon {
+            font-size: 28px;
+        }
     }
 }
 
