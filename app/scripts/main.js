@@ -16,7 +16,7 @@ $(function() {
             $tabBadge.text('');
             $this
                 .addClass('numeric')
-                .removeClass('btn-attention small')
+                .removeClass('btn-attention btn-danger small')
                 .text('15')
                 .append($badge)
             ;
@@ -31,7 +31,7 @@ $(function() {
             $tabBadge.text('0');
             $this
                 .removeClass('numeric')
-                .addClass('btn-attention small')
+                .addClass('btn-attention btn-danger small')
                 .html("\"Hi, can you help<br>me with this?\"")
                 .append($badge)
             ;

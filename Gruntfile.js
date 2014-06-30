@@ -152,6 +152,7 @@ module.exports = function (grunt) {
         sass: {
             options: {
                 loadPath: [
+                    'bower_components/bootstrap-sass-official/vendor/assets/stylesheets',
                     'bower_components'
                 ]
             },
@@ -406,7 +407,7 @@ module.exports = function (grunt) {
         // 'cssmin',
         // 'uglify',
         'copy:dist',
-        'rev',
+        // 'rev',
         'usemin',
         // 'htmlmin'
     ]);
