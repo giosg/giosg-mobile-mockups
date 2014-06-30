@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>giosg mobile mockups</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <style type="text/css">
+        body {
+            background: black;
+            text-align: center;
+        }
+        a {
+            color: #44f;
+        }
+        #mobile-frame-container {
+            width: 360px;
+            height: 640px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #mobile-frame-container.landscape {
+            width: 640px;
+            height: 360px;
+        }
+        #mobile-frame {
+            width: 100%;
+            height: 100%;
+            border-style: none;
+        }
+        </style>
+    </head>
+    <body>
+        <p>
+            <a href="javascript:void(0)" id="navigate-back">Back</a> |
+            <a href="javascript:void(0)" id="rotate-mobile-frame">Rotate</a>
+        </p>
+        <div id="mobile-frame-container" class="portrait">
+            <iframe src="mockup_login.html" frameborder="0" id="mobile-frame"></iframe>
+        </div>
+        <script src="scripts/vendor.js"></script>
+        <script type="text/javascript">
+        (function() {
+            'use strict';
+            $('#rotate-mobile-frame').on('click', function() {
+                $('#mobile-frame-container').toggleClass('portrait landscape');
+            });
+            $('#navigate-back').on('click', function() {
+                $('#mobile-frame').prop('contentWindow').history.back();
+            });
+        }).call(this);
+        </script>
+</body>
+</html>

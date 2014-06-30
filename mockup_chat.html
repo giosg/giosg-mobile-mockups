@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>giosg mobile mockups</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="styles/vendor.css"/>
+        <link rel="stylesheet" href="styles/main.css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container text-center">
+                <a class="btn navbar-btn pull-left" href="mockup_operator.html">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="btn navbar-btn pull-right" href="mockup_settings.html">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+                <span class="toggleable toggleable-on" onclick="$(this).toggleClass('toggleable-on toggleable-off')">
+                    <span class="toggleable-bg">
+                        <span class="toggleable-label toggleable-label-on">Online</span>
+                        <span class="toggleable-label toggleable-label-off">Offline</span>
+                    </span>
+                    <span class="toggleable-handle"></span>
+                </span>
+            </div><!-- /.container -->
+        </nav>
+
+        <div class="container chat-container">
+            <div class="layout-container">
+                <div class="layout-row layout-fill-height">
+                    <div class="layout-cell">
+                        <div class="chat-log-list">
+                            <div class="chat-log-entry chat-log-entry-operator">
+                                <img src="images/avatar.jpg" class="avatar">
+                                <div class="chat-log-message">
+                                    <small class="chat-log-date">11:07:35</small>
+                                    <p class="data">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <div class="chat-log-entry chat-log-entry-visitor">
+                                <div class="chat-log-message">
+                                    <small class="chat-log-date">11:07:39</small>
+                                    <p class="data">Consectetur adipiscing elit. Mauris odio dolor, mattis molestie accumsan ut, bibendum eget neque.</p>
+                                </div>
+                            </div>
+                            <div class="chat-log-entry chat-log-entry-operator">
+                                <img src="images/avatar.jpg" class="avatar">
+                                <div class="chat-log-message">
+                                    <small class="chat-log-date">11:07:57</small>
+                                    <p class="data">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <div class="chat-log-entry chat-log-entry-visitor">
+                                <div class="chat-log-message">
+                                    <small class="chat-log-date">11:07:59</small>
+                                    <p class="data">Mauris odio dolor, mattis molestie accumsan ut, bibendum eget neque.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layout-row">
+                    <div class="layout-cell">
+                        <div class="input-group chat-message-composition">
+                            <textarea class="form-control" placeholder="Chat..."></textarea>
+                            <span class="input-group-btn">
+                              <button type="submit" class="btn btn-primary send-button">Send</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="virtual-keyboard">
+            This pretends to be a virtual keyboard!
+        </div>
+
+        <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/plugins.js"></script>
+
+        <script src="scripts/main.js"></script>
+</body>
+</html>

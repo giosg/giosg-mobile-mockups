@@ -1,0 +1,92 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>giosg mobile mockups</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="styles/vendor.css"/>
+        <link rel="stylesheet" href="styles/main.css"/>
+    </head>
+    <body>
+        <div class="giosg-background visible-xs"></div>
+
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container text-center">
+                <a class="btn navbar-btn pull-left invisible">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="btn navbar-btn pull-right" href="mockup_settings.html">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
+                <span class="toggleable toggleable-on" onclick="$(this).toggleClass('toggleable-on toggleable-off')">
+                    <span class="toggleable-bg">
+                        <span class="toggleable-label toggleable-label-on">Online</span>
+                        <span class="toggleable-label toggleable-label-off">Offline</span>
+                    </span>
+                    <span class="toggleable-handle"></span>
+                </span>
+            </div><!-- /.container -->
+        </nav>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-justified nav-tabs-justified main-tabs">
+            <li class="active"><a href="#visitors" data-toggle="tab">
+                Visitors
+                <span class="badge"></span>
+            </a></li>
+            <li><a href="#recent-chats" data-toggle="tab">
+                Recent chats
+            </a></li>
+        </ul>
+
+        <div class="container">
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <form class="tab-pane main-tab-pane active" id="visitors" action="mockup_chat.html" method="GET">
+                    <button type="submit" class="btn btn-primary btn-lg-circle numeric" id="visitor-button">
+                        15
+                        <span class="btn-badge" style="display: none;">0</span>
+                    </button>
+                </form>
+                <div class="tab-pane main-tab-pane" id="recent-chats">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="list-group">
+                                <a class="list-group-item" href="mockup_chat.html">
+                                    <span class="badge">5</span>
+                                    13.5.2014 13.02
+                                </a>
+                                <a class="list-group-item" href="mockup_chat.html">
+                                    <span class="badge">2</span>
+                                    12.5.2014 13.02
+                                </a>
+                                <a class="list-group-item" href="mockup_chat.html">
+                                    <span class="badge">30</span>
+                                    12.5.2014 12.02
+                                </a>
+                                <a class="list-group-item" href="mockup_chat.html">
+                                    <span class="badge">6</span>
+                                    11.5.2014 13.02
+                                </a>
+                                <a class="list-group-item" href="mockup_chat.html">
+                                    <span class="badge">5</span>
+                                    10.5.2014 13.02
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/plugins.js"></script>
+
+        <script src="scripts/main.js"></script>
+</body>
+</html>
