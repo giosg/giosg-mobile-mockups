@@ -185,7 +185,7 @@ body {
     &:before, &:after {
         content: "";
         position: absolute;
-        top: 50%;
+        top: 16px;
         display: block;
         box-sizing: content-box;
         border-style: none;
@@ -197,14 +197,13 @@ body {
         border-width: $width + 1px;
         border-top: 1px + $height / 2 solid transparent;
         border-bottom: 1px + $height / 2 solid transparent;
-        margin-top: -1 * floor(($height + 2px) / 2);
+        margin-top: -1px;
     }
     &:after {
         border-color: $color;
         border-width: $width;
         border-top: $height / 2 solid transparent;
         border-bottom: $height / 2 solid transparent;
-        margin-top: -1 * floor($height / 2);
     }
 }
 @mixin bubble-arrow-left($width, $height, $color, $border-color) {
@@ -237,20 +236,32 @@ body {
 .chat-log-entry {
     $color-1: #fff;
     $color-2: #eef2ff;
-    position: relative;
-    background: $color-1;
-    border: 1px solid darken($color-1, 25%);
-    clear: both;
     margin: 0px 11px 8px;
-    padding: 8px 12px;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    @include bubble-arrow-left(10px, 16px, $color-1, darken($color-1, 30%));
+    .chat-log-message {
+        position: relative;
+        background: $color-1;
+        border: 1px solid darken($color-1, 25%);
+        padding: 8px 12px;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        margin: 0 64px 0 0;
+        @include bubble-arrow-right(10px, 16px, $color-1, darken($color-1, 30%));
+    }
+
+    .avatar {
+        @include square(48px);
+        float: right;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+    }
 
     &.chat-log-entry-visitor {
-        background-color: $color-2;
-        border-color: darken($color-2, 10%);
-        @include bubble-arrow-right(10px, 16px, $color-2, darken($color-2, 15%));
+        .chat-log-message {
+            margin: 0 0 0 11px;
+            background-color: $color-2;
+            border-color: darken($color-2, 10%);
+            @include bubble-arrow-left(10px, 16px, $color-2, darken($color-2, 15%));
+        }
     }
     p {
         margin: 0;
