@@ -237,6 +237,7 @@ body {
     $color-1: #fff;
     $color-2: #eef2ff;
     margin: 0px 11px 8px;
+    padding-bottom: 20px;
     .chat-log-message {
         position: relative;
         background: $color-1;
@@ -255,12 +256,24 @@ body {
         -webkit-border-radius: 4px;
     }
 
+    .chat-log-date {
+        color: #bbb;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        padding: 3px 8px;
+    }
+
     &.chat-log-entry-visitor {
         .chat-log-message {
             margin: 0 0 0 11px;
             background-color: $color-2;
             border-color: darken($color-2, 10%);
             @include bubble-arrow-left(10px, 16px, $color-2, darken($color-2, 15%));
+        }
+        .chat-log-date {
+            right: auto;
+            left: 0;
         }
     }
     p {
