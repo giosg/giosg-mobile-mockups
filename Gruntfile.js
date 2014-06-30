@@ -358,7 +358,7 @@ module.exports = function (grunt) {
                 'sass',
                 'copy:styles',
                 'imagemin',
-                'svgmin'
+                // 'svgmin'
             ]
         }
     });
