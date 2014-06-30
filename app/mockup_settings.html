@@ -22,6 +22,9 @@
                 <a class="btn navbar-btn pull-left" href="mockup_operator.html">
                     <span class="glyphicon glyphicon-chevron-left"></span>
                 </a>
+                <a class="btn navbar-btn pull-right invisible">
+                    <span class="glyphicon glyphicon-cog"></span>
+                </a>
                 <span class="toggleable toggleable-on" onclick="$(this).toggleClass('toggleable-on toggleable-off')">
                     <span class="toggleable-bg">
                         <span class="toggleable-label toggleable-label-on">Online</span>
@@ -33,7 +36,22 @@
         </nav>
 
         <div class="container">
-        Settings will be here
+            <div class="row">
+                <div class="col-sm-6">
+                    <h4>Profile settings</h4>
+                    <p>Edit your profile settings on the giosg website.</p>
+                    <a href="https://service.giosg.com" class="btn btn-info btn-block btn-lg" target="_top">
+                        Open browser
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <h4>Log out</h4>
+                    <p>Log out or switch to another user account.</p>
+                    <a href="mockup_login.html" class="btn btn-danger btn-block btn-lg" target="_self">
+                        Log out
+                    </a>
+                </div>
+            </div>
         </div>
 
         <!-- build:js scripts/vendor.js -->
